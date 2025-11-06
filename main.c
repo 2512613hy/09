@@ -9,6 +9,11 @@ int main(int argc, char *argv[]) {
 	char c;	
 	
 	fp = fopen("sample.txt", "r");
+	if(fp==NULL)
+	{
+		printf("Failed to open file!\n");
+		return -1;
+	}	
 		
 	while( (c = fgetc(fp)) != EOF)
 	{
